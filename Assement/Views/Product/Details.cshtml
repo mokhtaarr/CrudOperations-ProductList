@@ -1,0 +1,21 @@
+﻿@model Product
+
+@{
+    ViewData["Title"] = Model.Name;
+}
+<div class="row justify-content-between mt-60-px">
+    <div class="col-md-3">
+        <img src="data:image/*;base64,@(Convert.ToBase64String(Model.poster))" class="img-thumbnail" alt="@Model.Name" />
+    </div>
+    <div class="col-md-7">
+        <div class="d-flex justify-content-between mb-3">
+            <h3>@Model.Name</h3>
+          
+        </div>
+        <span class="text-muted mr-3">
+           Price : @Model.Price
+        </span>
+       
+        <p class="text-justify mt-3">@Model.Description</p>
+    </div>
+</div>
